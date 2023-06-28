@@ -1,0 +1,88 @@
+.my-container {
+    min-width: 100vw;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar-text {
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 100;
+}
+
+.products {
+    display: flexbox;
+    align-items: center;
+    justify-content: center;
+}
+
+.all-products {
+    display: flexbox;
+    min-width: 40vh;
+    max-width: 50vh;
+    height: 60vh;
+    background-color: #F2F2F2FF;
+    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    flex-shrink: 0;
+    flex-grow: 1;
+    flex-basis: 200px;
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0px 0px 5px gray;
+}
+
+
+
+.active-card {
+    display: flexbox;
+}
+
+.inactive-card {
+    display: none;
+}
+
+
+.placeholder-cards {
+    display: flexbox;
+    min-width: 40vh;
+    max-width: 50vh;
+    height: 10px;
+    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+    flex-grow: 1;
+    flex-basis: 200px;
+}
+
+.product-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    justify-self: center;
+    padding: 20px;
+    justify-content: center;
+}
+
+.product-sidebar {
+    border-radius: 10px;
+    box-shadow: 0 0 1px gray;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.product-sidebar-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.product-label {
+    font-size: 1 rem;
+    font-weight: 300;
+}

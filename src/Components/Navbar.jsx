@@ -1,8 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import logo from "../Icons/main-logo.png";
 import { NavLink } from 'react-router-dom';
+import { AppContext } from './ContextStates';
+
+
+function dropDownList(coll) {
+
+    const url = ("" + coll.name).toString().toLowerCase().replaceAll(" ", "-");
+
+    return (
+        <li className='text-start px-3 py-1 text-nowrap'>
+            <NavLink class="dropdown-item" to={'/tools/' + url} className="text-decoration-none text-light">
+                {coll.name}
+            </NavLink>
+        </li>
+    )
+}
 
 function NavBar() {
+    const collections = useContext(AppContext).collections.data;
+    const categories = useContext(AppContext).categories;
+
+
     return (
         <>
             <nav className="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
@@ -32,6 +51,12 @@ function NavBar() {
                                 </a>
                                 <ul className="dropdown-menu">
 
+                                   {collections.map((value) => {
+                                        return (
+                                            <>{(value.category == 1) ? dropDownList(value) : ""}</>
+                                        )
+                                    })}
+                                    
                                 </ul>
                             </li>
 
@@ -43,6 +68,12 @@ function NavBar() {
                                     Stone Tools
                                 </a>
                                 <ul className="dropdown-menu">
+                                    
+                                   {collections.map((value) => {
+                                        return (
+                                            <>{(value.category == 2) ? dropDownList(value) : ""}</>
+                                        )
+                                    })}
                            
                                 </ul>
                             </li>
