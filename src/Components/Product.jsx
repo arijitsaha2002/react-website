@@ -113,7 +113,7 @@ function Product() {
 
           </div>
 
-          <div className="col-lg-3 p-5 text-light align-self-start mt-5" style={{ "backgroundColor": "#333333" }}>
+          <div className="col-lg-3 p-5 text-light align-self-start mt-5" style={{ "backgroundColor": "#333333", "borderRadius": "20px" }}>
             <div className="mb-3" style={{ "fontWeight": 100, "fontSize": "1.5rem" }}>
               {cat.name}
             </div>

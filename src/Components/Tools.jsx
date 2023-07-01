@@ -4,6 +4,7 @@ import { AppContext } from "./ContextStates";
 import './Tools.css'
 import ProductCard from "./ProductCard";
 import SideBar from "./SideBar";
+import MobileSideBar from "./MobileSideBar";
 
 function Tools() {
 
@@ -52,7 +53,13 @@ function Tools() {
                 </div>
                     
 
-                <div className="" style={{"width" : "max-content"}}>
+                <div className="" style={{ "width": "max-content" }}>
+
+                    <div class="container px-3 ms-3 d-block d-lg-none">
+
+                        <MobileSideBar />
+
+                    </div>
                         
                     {/* <div className="p-0 text-center" style={{ "fontSize": "2rem", "fontWeight": "500" }} id="product-header">
 

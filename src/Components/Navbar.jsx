@@ -55,7 +55,7 @@ function NavBar() {
                                 <a className="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
                                     aria-expanded="true">
                                     Construction
-                                    Tools
+                                    Tools &nbsp;
                                 </a>
                                 <ul className="dropdown-menu">
 
@@ -73,7 +73,7 @@ function NavBar() {
                             <li className="nav-item dropdown mx-3">
                                 <a className="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
                                     aria-expanded="true">
-                                    Stone Tools
+                                    Stone Tools &nbsp;
                                 </a>
                                 <ul className="dropdown-menu">
                                     
@@ -91,7 +91,7 @@ function NavBar() {
                             <li className="nav-item dropdown mx-3">
                                 <a className="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
                                     aria-expanded="true">
-                                    About
+                                    About &nbsp;
                                 </a>
                                 <ul className="dropdown-menu">
                                     <li>
@@ -134,4 +134,4 @@ function NavBar() {
     )
 }
 
-export default NavBar;
+export {NavBar, dropDownList};
