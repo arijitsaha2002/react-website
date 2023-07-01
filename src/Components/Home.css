@@ -1,0 +1,85 @@
+#home-img {
+    background-image: url("../Icons/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    height: 40vw;
+}
+
+#img-text {
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+
+@media screen and (min-width: 992px) {
+    .my-card-home {
+        width: 20vw;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .my-card-home {
+        width: 175px;
+    }
+}
+
+.my-card-home {
+    background-color: green;
+    flex-shrink: 0;
+    aspect-ratio: 3 / 4;
+    margin: 1vw;
+    border-radius: 10px;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../Icons/1.webp');
+    background-size: cover;
+}
+
+.my-card-home:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../Icons/1.webp');
+    background-size: cover;
+    cursor: pointer;
+}
+
+.my-text {
+    font-size: 2rem;
+    font-weight: 500;
+    color: white;
+}
+
+.arrow-left,
+.arrow-right {
+    position: absolute;
+    padding: 10px;
+}
+
+.arrow-left {
+    top: 50%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+}
+
+.arrow-right {
+    top: 50%;
+    right: 5%;
+    transform: translate(50%, -50%);
+}
+
+#main-container-background {
+    scroll-behavior: smooth;
+}
+
+#main-container-background::-webkit-scrollbar {
+    height: 3px;
+    border-radius: 1px;
+    background-color: #CECECEFF;
+}
+
+#main-container-background::-webkit-scrollbar-track {
+    background-color: #CECECEFF;
+}
+
+#main-container-background::-webkit-scrollbar-thumb {
+    background-color: black;
+}

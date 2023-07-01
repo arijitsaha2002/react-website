@@ -12,11 +12,12 @@ import Product from './Components/Product';
 import { Technology, Techs } from './Components/Technology';
 import { useContext } from 'react';
 import { AppContext } from './Components/ContextStates';
+import MyModel from './Components/Model';
+import SearchResult from './Components/SearchResult';
 
 function App() {
 
     const prom = useContext(AppContext).prom;
-    console.log(prom)
 
     const Blank = () => {
         return (
@@ -26,6 +27,7 @@ function App() {
 
     return (prom >= 5) ? (
         <>
+            <MyModel />
             <div className='d-flex flex-column justify-content-between min-vh-100 w-100'>
                 <div className='sticky-top'>
                     <NavBar />
@@ -37,6 +39,7 @@ function App() {
                         <Route path='/about-us' element={<Base Com={About} Bottom={Blank} />} />
                         <Route path='/contact-us' element={<Contact />} />
                         <Route path='/tools/:col' element={<Tools />} />
+                        <Route path='/tools/search/:col' element={<SearchResult />} />
                         <Route path='/technology' element={<Base Com={Technology} Bottom={Techs} />} />
                         <Route path='/faqs' element={<Base Com={Faqs} Bottom={Blank} />} />
                         <Route path='/products/:id' element={<Product />} />

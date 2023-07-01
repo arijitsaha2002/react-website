@@ -13,7 +13,7 @@
 
 .products {
     display: flexbox;
-    align-items: center;
+    align-items: start;
     justify-content: center;
 }
 
@@ -22,10 +22,6 @@
     min-width: 40vh;
     max-width: 50vh;
     height: 60vh;
-    background-color: #F2F2F2FF;
-    margin: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
     background-color: white;
     flex-shrink: 0;
     flex-grow: 1;
@@ -51,9 +47,6 @@
     min-width: 40vh;
     max-width: 50vh;
     height: 10px;
-    margin: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
     flex-shrink: 0;
     flex-grow: 1;
     flex-basis: 200px;
@@ -63,11 +56,10 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0;
+    margin-right: 0;
     justify-self: center;
-    padding: 20px;
-    justify-content: center;
+    padding-top: 20px;
 }
 
 .product-sidebar {

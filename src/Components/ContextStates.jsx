@@ -28,7 +28,6 @@ function AppStates({ children }) {
 
             setCollections({ "data": data, "lookup": newData });
             setProm1(prom1 + 1);
-            console.log(prom1 + "here")
         })
         axios.get("http://127.0.0.1:8000/api/products/").then((response) => {
             let data = response.data;
@@ -39,7 +38,6 @@ function AppStates({ children }) {
             }            
             setProducts({ "data": data, "lookup": newData });
             setProm2(prom2 + 1);
-            console.log(prom2 + "here")
         })
         axios.get("http://127.0.0.1:8000/api/categories/").then((response) => {
             let data = response.data;
@@ -50,17 +48,14 @@ function AppStates({ children }) {
             }            
             setCategories({ "data": data, "lookup": newData });
             setProm3(prom3 + 1);
-            console.log(prom3 + "here")
         })
         axios.get("http://127.0.0.1:8000/api/faqs/").then((response) => {
             setFaqs(response.data);
             setProm4(prom4 + 1);
-            console.log(prom4 + "here")
         })
         axios.get("http://127.0.0.1:8000/api/technology/").then((response) => {
             setTechnology(response.data);
             setProm5(prom5 + 1);
-            console.log(prom5 + "here")
         })
     }, [])
 

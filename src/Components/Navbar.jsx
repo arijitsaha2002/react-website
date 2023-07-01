@@ -2,15 +2,17 @@ import React, { useContext } from 'react';
 import logo from "../Icons/main-logo.png";
 import { NavLink } from 'react-router-dom';
 import { AppContext } from './ContextStates';
+import { FaPhone, FaSearch } from 'react-icons/fa';
+import { BsTelephoneFill } from 'react-icons/bs';
 
 
 function dropDownList(coll) {
 
-    const url = ("" + coll.name).toString().toLowerCase().replaceAll(" ", "-");
+    const url = ("" + coll.id).toString().toLowerCase().replaceAll(" ", "-");
 
     return (
         <li className='text-start px-3 py-1 text-nowrap'>
-            <NavLink class="dropdown-item" to={'/tools/' + url} className="text-decoration-none text-light">
+            <NavLink to={'/tools/' + url} className="dropdown-item text-decoration-none text-light">
                 {coll.name}
             </NavLink>
         </li>
@@ -26,6 +28,12 @@ function NavBar() {
         <>
             <nav className="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
                 <div className="container-fluid my-1">
+
+                    <div className="nav-item px-3 me-3 d-lg-none" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <FaSearch color='white' />
+                    </div>
+
+
                         
                     <NavLink to="/">
                         <img className="navbar-brand ms-3" style={{ "width": "8vw", "minWidth": "100px" }} src={logo} />
@@ -51,9 +59,9 @@ function NavBar() {
                                 </a>
                                 <ul className="dropdown-menu">
 
-                                   {collections.map((value) => {
+                                    {collections.map((value, index) => {
                                         return (
-                                            <>{(value.category == 1) ? dropDownList(value) : ""}</>
+                                            <div key={index}>{(value.category == 1) ? dropDownList(value) : ""}</div>
                                         )
                                     })}
                                     
@@ -69,9 +77,9 @@ function NavBar() {
                                 </a>
                                 <ul className="dropdown-menu">
                                     
-                                   {collections.map((value) => {
+                                    {collections.map((value, index) => {
                                         return (
-                                            <>{(value.category == 2) ? dropDownList(value) : ""}</>
+                                            <div key={index}>{(value.category == 2) ? dropDownList(value) : ""}</div>
                                         )
                                     })}
                            
@@ -107,8 +115,7 @@ function NavBar() {
 
                             <li className="nav-item mx-3">
                                 <NavLink className="nav-link text-light" to="/contact-us">
-                                    <i className="fa fa-phone"></i>
-                                    Contact Us
+                                    <BsTelephoneFill /> &nbsp; Contact Us
                                 </NavLink>
                             </li>
 
@@ -117,9 +124,9 @@ function NavBar() {
 
                     </div>
 
-                    {/*  <li className="nav-item px-3" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            <div className="fa-solid fa-magnifying-glass fa-lg" style="color: #ffffff; border: none;"></div>
-                        </li>*/}
+                    <div className="nav-item px-3 me-3 d-none d-lg-block" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <FaSearch color='white' />
+                    </div>
 
                 </div>
             </nav>

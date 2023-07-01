@@ -34,7 +34,7 @@ function Tech(i) {
             <div className="col-lg-6 col-12 justify-content-center d-flex mt-5 mb-5">
                 <div className="technology-card">
 
-                    <div class="technology-card-img">
+                    <div className="technology-card-img">
                         <img src={i.left_logo} className="top-img" />
                     </div>
                     <br />
@@ -58,7 +58,7 @@ function Tech(i) {
 
             <div className="col-lg-6 col-12 justify-content-center d-flex mt-5 mb-5">
                 <div className="technology-card">
-                    <div class="technology-card-img">
+                    <div className="technology-card-img">
                         <img src={i.right_logo} className="top-img" />
                     </div>
                     <br />                
@@ -95,11 +95,11 @@ function Techs() {
     return (
         <>
             {
-                data.map((value) => {
+                data.map((value, index) => {
                     return (
-                        <>
+                        <div key={index}>
                             {Tech(value)}
-                        </>
+                        </div>
                     )
                 })
             }

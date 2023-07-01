@@ -7,7 +7,7 @@ import { AppContext } from "./ContextStates";
 
 function Faqs() {
     const data = useContext(AppContext).faqs;
-    const [height, setHeight] = useState(0);
+    const [height, setHeight] = useState(1000);
     const [divName, setName] = useState(0);
 
 
@@ -16,16 +16,19 @@ function Faqs() {
         let h = document.getElementById("answer-" + e).scrollHeight;
         setHeight(h);
     }
-    
+
+    useEffect(() => {
+        toggleDiv(0);
+    }, []);
 
     return (
         <div>
             {
-                data.map((value, index) => {
+                data.map((value, index) => {    
                     return (
-                        <>
+                        <div key={index}>
                             <div className="question py-2 px-3 d-flex justify-content-between align-items-center"
-                                style={{ "font-weight": 500 }} onClick={() => { toggleDiv(index) }}>
+                                style={{ "fontWeight": 500 }} onClick={() => { toggleDiv(index) }}>
                                 <div>
                                     {value.question}
                                 </div>
@@ -34,13 +37,16 @@ function Faqs() {
                                 </div>
                             </div>
 
+
                             <div id={`answer-${index}`} className="answer" style={{ "maxHeight": `${(divName === index) ? height : 0}px` }}>
                                 <div className="p-3">
                                     {value.answer}
                                 </div>
+
                             </div>
+
                             <br />
-                        </>
+                        </div>
                     )
                 }
                 )

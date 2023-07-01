@@ -7,17 +7,17 @@ function Contact() {
     return (
         <div>
             
-            <div class="container text-left my-5">
-                <div class="row justify-content-around p-3">
+            <div className="container text-left my-5">
+                <div className="row justify-content-around p-3">
 
-                    <div class="col-lg-5 col-12 d-flex justify-content-center">
-                        <div class="d-flexbox">
+                    <div className="col-lg-5 col-12 d-flex justify-content-center">
+                        <div className="d-flexbox">
                             <div id="contact-text"> Dee Tec Tools LLP </div>
                             <br />
                             <div id="address">
 
                                 <h3>Address</h3>
-                                <div class="normal-text">
+                                <div className="normal-text">
                                     DeeTec Tools LLP
                                     <br />
                                     1404 Maker Chamber 5
@@ -32,18 +32,18 @@ function Contact() {
                                 <br />
 
                                 <h3>sales@deetec.in</h3>
-                                <div class="normal-text">
+                                <div className="normal-text">
                                     Tel No : +91-022-35113202
                                     <br />
                                 </div>
                                 <br />
                                 <br />
-                                <div class="normal-text">
-                                    WhatsApp : <span class="fst-italic fw-normal">+9137 49 8003</span>
+                                <div className="normal-text">
+                                    WhatsApp : <span className="fst-italic fw-normal">+9137 49 8003</span>
                                     <br />
-                                    Viber Chat : <span class="fst-italic fw-normal">+9137 49 8003</span>
+                                    Viber Chat : <span className="fst-italic fw-normal">+9137 49 8003</span>
                                     <br />
-                                    E Mail Us : <span class="fst-italic fw-normal">sales@deetec.in</span>
+                                    E Mail Us : <span className="fst-italic fw-normal">sales@deetec.in</span>
                                 </div>
                                 <br />
                             </div>
@@ -51,34 +51,34 @@ function Contact() {
                     </div>
 
 
-                    <div class="col-lg-5 col-12 d-flex justify-content-center">
-                        <div class="d-flexbox">
+                    <div className="col-lg-5 col-12 d-flex justify-content-center">
+                        <div className="d-flexbox">
 
                             <br />
                             Please use this contact form below, and let our partnership begin.
 
-                            <form class="mt-5" action="/contact-us" method="post">
+                            <form className="mt-5" action="/contact-us" method="post">
 
-                                <div class="mb-3 form-group">
+                                <div className="mb-3 form-group">
                                     <label for="name">Your Name (required)</label>
-                                    <input type="text" class="form-control" name="name" id="name" required />
+                                    <input type="text" className="form-control" name="name" id="name" required />
                                 </div>
 
-                                <div class="mb-3 form-group">
+                                <div className="mb-3 form-group">
                                     <label for="email">Your Email (required)</label>
-                                    <input type="email" class="form-control" name="email" id="email" required />
+                                    <input type="email" className="form-control" name="email" id="email" required />
                                 </div>
 
-                                <div class="mb-3 form-group">
+                                <div className="mb-3 form-group">
                                     <label for="sub">Subject</label>
-                                    <input type="text" class="form-control" name="sub" id="sub" />
+                                    <input type="text" className="form-control" name="sub" id="sub" />
                                 </div>
 
-                                <div class="mb-3 form-group">
+                                <div className="mb-3 form-group">
                                     <label for="msg">Your Message</label>
-                                    <textarea class="form-control" name="msg" id="msg" rows="10"></textarea>
+                                    <textarea className="form-control" name="msg" id="msg" rows="10"></textarea>
                                 </div>
-                                <input type="submit" class="btn btn-dark" value="Submit" />
+                                <input type="submit" className="btn btn-dark" value="Submit" />
                             </form>
                         </div>
                     </div>

@@ -7,6 +7,6 @@
 
 .answer {
     overflow: hidden;
-    padding: 0 10px;
-    transition: max-height 0.3s linear;
+   padding: 0 10px;
+   transition: max-height 0.3s linear;
 }
