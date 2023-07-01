@@ -41,43 +41,41 @@ function Tools() {
             </div>
 
 
-            <div className="container-fluid">
-                <div className="row justify-content-between p-0">
+            <div className="d-flex justify-content-between flex-row flex-nowrap">
 
-                    <div className="col-lg-3 text-light align-self-start text-nowrap">
-                        <div className="d-none d-lg-inline"> 
-                        <div className="my-4 py-2">
+                <div className="text-light align-self-start text-nowrap">
+                    <div className="d-none d-lg-inline-block"> 
+                        <div className="my-4 px-3 py-2">
                             <SideBar />
                         </div>
-                        </div>
                     </div>
+                </div>
                     
 
-                    <div className="col-lg-9 col-12 px-0 py-0">
+                <div className="" style={{"width" : "max-content"}}>
                         
-                       {/* <div className="p-0 text-center" style={{ "fontSize": "2rem", "fontWeight": "500" }} id="product-header">
+                    {/* <div className="p-0 text-center" style={{ "fontSize": "2rem", "fontWeight": "500" }} id="product-header">
 
                         </div>*/}
 
-                        <div className="product-box justify-content-around align-items-start">
+                    <div className="product-box justify-content-around align-items-start">
 
-                            {products.map((value, index) => {
-                                return (value.collection == param) ? (
-                                    <ProductCard key={index} value={value} />
-                                ) : (<Blank key={index} />)
-                            })
+                        {products.map((value, index) => {
+                            return (value.collection == param) ? (
+                                <ProductCard key={index} value={value} />
+                            ) : (<Blank key={index} />)
+                        })
 
-                            }
+                        }
 
-                            <div className="placeholder-cards"></div>
-                            <div className="placeholder-cards"></div>
-                            <div className="placeholder-cards"></div>
-                            <div className="placeholder-cards"></div>
-                            <div className="placeholder-cards"></div>
+                        <div className="placeholder-cards"></div>
+                        <div className="placeholder-cards"></div>
+                        <div className="placeholder-cards"></div>
+                        <div className="placeholder-cards"></div>
+                        <div className="placeholder-cards"></div>
 
-                        </div>
-                        
                     </div>
+                        
                 </div>
             </div>
         </div>

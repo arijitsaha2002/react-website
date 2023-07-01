@@ -18,11 +18,11 @@ function SideBar() {
                         return (value.category == 1) ? (
                             <NavLink key={index} className="text-decoration-none text-white d-flex justify-content-between my-3 p-2" role="button" to={`/tools/${value.id}`} style={{ "backgroundColor": "#555555", "fontSize": "1.1rem" }}>
                                 <div>
-                                    &nbsp; {value.name} 
+                                    &nbsp; {value.name}
                                 </div>
 
-                                <div>
-                                    <BsChevronRight /> &nbsp;
+                                <div className="ms-3 me-1">
+                                    <BsChevronRight />
                                 </div>
                             </NavLink>
                         ) : (<div key={index}></div>)
@@ -41,8 +41,8 @@ function SideBar() {
                                     &nbsp; {value.name} 
                                 </div>
 
-                                <div>
-                                    <BsChevronRight /> &nbsp;
+                                <div className="ms-3 me-1">
+                                    <BsChevronRight />
                                 </div>
                             </NavLink>
                         ) : (<div key={index}></div>)
