@@ -16,9 +16,10 @@ function AppStates({ children }) {
     const [prom3, setProm3 ] = useState(0);
     const [prom4, setProm4 ] = useState(0);
     const [prom5, setProm5 ] = useState(0);
+    const domain = "192.168.0.101:8000";
 
     useEffect(() => {
-        axios.get("http://127.0.0.1:8000/api/collections/").then((response) => {
+        axios.get("http://"+ domain +"/api/collections/").then((response) => {
             let data = response.data;
             let newData = {}
 
@@ -29,7 +30,7 @@ function AppStates({ children }) {
             setCollections({ "data": data, "lookup": newData });
             setProm1(prom1 + 1);
         })
-        axios.get("http://127.0.0.1:8000/api/products/").then((response) => {
+        axios.get("http://"+ domain +"/api/products/").then((response) => {
             let data = response.data;
             let newData = {}
 
@@ -39,7 +40,7 @@ function AppStates({ children }) {
             setProducts({ "data": data, "lookup": newData });
             setProm2(prom2 + 1);
         })
-        axios.get("http://127.0.0.1:8000/api/categories/").then((response) => {
+        axios.get("http://"+ domain +"/api/categories/").then((response) => {
             let data = response.data;
             let newData = {}
 
@@ -49,11 +50,11 @@ function AppStates({ children }) {
             setCategories({ "data": data, "lookup": newData });
             setProm3(prom3 + 1);
         })
-        axios.get("http://127.0.0.1:8000/api/faqs/").then((response) => {
+        axios.get("http://"+ domain +"/api/faqs/").then((response) => {
             setFaqs(response.data);
             setProm4(prom4 + 1);
         })
-        axios.get("http://127.0.0.1:8000/api/technology/").then((response) => {
+        axios.get("http://"+ domain +"/api/technology/").then((response) => {
             setTechnology(response.data);
             setProm5(prom5 + 1);
         })

@@ -1,22 +1,20 @@
 import { AppContext } from "./ContextStates";
-import { BsChevronRight } from 'react-icons/bs'
 import { useContext } from "react";
-import { NavLink } from "react-router-dom";
 import { dropDownList } from "./Navbar";
 
 
 function MobileSideBar() {
     const context = useContext(AppContext);
     return (
-        <div class="row justify-content-around align-items-center  text-center">
-            <div class="col-12 d-md-flex justify-content-center">
-                <div class="btn-group">
-                    <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
+        <div className="row justify-content-around align-items-center text-center">
+            <div className="col-12 d-md-flex justify-content-center">
+                <div className="btn-group">
+                    <button type="button" className="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        <span class="h5">Construction Tools</span>
+                        <span className="h5">Construction Tools</span>
                     </button>
 
-                    <ul class="dropdown-menu bg-dark" data-bs-theme="dark">
+                    <ul className="dropdown-menu bg-dark" data-bs-theme="dark">
 
                         {context.collections.data.map((value, index) => {
                             return (
@@ -29,16 +27,15 @@ function MobileSideBar() {
 
             </div>
 
-            <div class="col-12 d-md-flex justify-content-center">
-
-                <div class="btn-group">
-                    <button type="button" class="mx-auto btn dropdown-toggle"
+            <div className="col-12 d-md-flex justify-content-center my-2">
+                <div className="btn-group">
+                    <button type="button" className="mx-auto btn btn-dark dropdown-toggle"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        <span class="h5">Stone Tools</span>
+                        <span className="h5">Stone Tools</span>
                     </button>
 
 
-                    <ul class="dropdown-menu bg-dark" data-bs-theme="dark">
+                    <ul className="dropdown-menu bg-dark" data-bs-theme="dark">
 
                         {context.collections.data.map((value, index) => {
                             return (

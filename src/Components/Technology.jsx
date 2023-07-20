@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import './Technology.css';
 import axios from 'axios';
+import { AppContext } from './ContextStates';
 
 function Technology() {
     return (
@@ -27,7 +28,7 @@ function Technology() {
 }
 
 
-function Tech(i) {
+function Tech({value}) {
 
     return (
         <>
@@ -35,23 +36,21 @@ function Tech(i) {
                 <div className="technology-card">
 
                     <div className="technology-card-img">
-                        <img src={i.left_logo} className="top-img" />
+                        <img src={value.left_logo} className="top-img" />
                     </div>
                     <br />
                     <br />
 
                     <center>
                         <div className='heading-text'>
-                            {i.left_heading}
+                            {value.left_heading}
                         </div>
                     </center>
 
 
                     <center className='desc-text'>
-                        {i.left_description}
+                        {value.left_description}
                     </center>
-
-
 
                 </div>
             </div>
@@ -59,19 +58,19 @@ function Tech(i) {
             <div className="col-lg-6 col-12 justify-content-center d-flex mt-5 mb-5">
                 <div className="technology-card">
                     <div className="technology-card-img">
-                        <img src={i.right_logo} className="top-img" />
+                        <img src={value.right_logo} className="top-img" />
                     </div>
                     <br />                
                     <br />
 
                     <center>
                         <div className='heading-text'>
-                            {i.right_heading}
+                            {value.right_heading}
                         </div>
                     </center>
 
                     <center className='desc-text'>
-                        {i.right_description}
+                        {value.right_description}
                     </center>
 
                 </div>
@@ -83,13 +82,7 @@ function Tech(i) {
 
 function Techs() {
 
-    const [data, setData] = useState([]);
-
-    useEffect(() => {
-        axios.get("http://127.0.0.1:8000/api/technology/").then((response) => {
-            setData(response.data);
-        })
-    }, [])
+   const data = useContext(AppContext).technology;
 
 
     return (
@@ -97,9 +90,7 @@ function Techs() {
             {
                 data.map((value, index) => {
                     return (
-                        <div key={index}>
-                            {Tech(value)}
-                        </div>
+                        <Tech value={value} key={index} />
                     )
                 })
             }

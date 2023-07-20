@@ -2,6 +2,7 @@
     width: 90%;
     height: max-content;
     border-style: solid;
+    border-width: 3px;
     position: relative;
 }
 
@@ -26,7 +27,7 @@
 
 .desc-text{
     padding: 20px; 
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .top-img{

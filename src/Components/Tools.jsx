@@ -23,7 +23,7 @@ function Tools() {
     return (
         <div style={{ "backgroundColor": "#CFE4E6FF" }}>
             <br />
-            <div className="mx-5" style={{ "fontSize": "1rem", "fontWeight": 500 }}>
+            <div className="mx-lg-5 mx-auto" style={{ "fontSize": "1rem", "fontWeight": 500, "width": "max-content" }}>
                 <nav aria-label="breadcrumb">
                     <ol className="breadcrumb">
                         <li className="breadcrumb-item"><a className="link-dark" >Home</a></li>
@@ -55,10 +55,8 @@ function Tools() {
 
                 <div className="" style={{ "width": "max-content" }}>
 
-                    <div class="container px-3 ms-3 d-block d-lg-none">
-
+                    <div class="container px-3 mx-auto d-block d-lg-none">
                         <MobileSideBar />
-
                     </div>
                         
                     {/* <div className="p-0 text-center" style={{ "fontSize": "2rem", "fontWeight": "500" }} id="product-header">

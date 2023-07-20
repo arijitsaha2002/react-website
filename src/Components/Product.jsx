@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { Fragment, useContext } from "react";
 import { useParams } from "react-router-dom"
 import { AppContext } from "./ContextStates";
 import img from '../Icons/products.webp'
@@ -15,16 +15,16 @@ function Product() {
     <>
 
       <br />
-      <div className="mx-5" style={{ "fontSize": "1rem", "fontWeight": 500 }}>
-        <nav aria-label="breadcrumb">
-          <ol className="breadcrumb">
-            <li className="breadcrumb-item"><a className="link-dark" >Home</a></li>
-            <li className="breadcrumb-item">
+      <div className="mx-lg-5 mx-3" style={{ "fontSize": "1rem", "fontWeight": 500 }}>
+        <nav className="text-center" aria-label="breadcrumb">
+          <ol className="breadcrumb mx-lg-0 mx-auto" style={{width:"max-fit"}}>
+            <li className="breadcrumb-item d-block">&nbsp; <a className="link-dark" >Home</a></li>
+            <li className="breadcrumb-item d-block">
               <a className="link-dark">
                 {cat.name}
               </a>
             </li>
-            <li className="breadcrumb-item" aria-current="page">
+            <li className="breadcrumb-item d-block" aria-current="page">
               <a className="link-dark">
                 {coll.name}
               </a>
@@ -34,7 +34,7 @@ function Product() {
         </nav>
       </div>
 
-      <div className="container-fluid my-5 px-5">
+      <div className="container-fluid my-5 px-lg-5 px-3">
         <div className="row justify-content-around">
 
           <div className="col-lg-8">
@@ -70,7 +70,7 @@ function Product() {
                                 <td>{product[`attributesName${i + 1}`]}</td>
                                 <td>{product[`attributes${i + 1}`]}</td>
                               </tr>
-                            ) : (<div key={i}></div>)
+                            ) : (<Fragment key={i}></Fragment>)
                         }
                         )
                       }
@@ -100,7 +100,7 @@ function Product() {
                             <li key={i}>
                               {coll[`description${i + 1}`]}
                             </li>
-                          ) : (<div key={i}></div>)
+                          ) : (<Fragment key={i}></Fragment>)
                       }
                       )
                     }
@@ -113,7 +113,7 @@ function Product() {
 
           </div>
 
-          <div className="col-lg-3 p-5 text-light align-self-start mt-5" style={{ "backgroundColor": "#333333", "borderRadius": "20px" }}>
+          <div className="col-lg-3 col-11 p-5 text-light align-self-start mt-5" style={{ "backgroundColor": "#333333", "borderRadius": "20px" }}>
             <div className="mb-3" style={{ "fontWeight": 100, "fontSize": "1.5rem" }}>
               {cat.name}
             </div>
@@ -121,7 +121,7 @@ function Product() {
             {
               context.collections.data.map((value, index) => {
                 return (value.category == cat.id) ? (
-                  <div key={index} className="my-2 p-2" role="button" style={{ "backgroundColor": "#555555", "fontSize": ".9rem" }}>
+                  <div key={index} className="my-2 p-2" role="button" style={{ "backgroundColor": "#555555", "fontSize": "1rem" }}>
                     <FaChevronLeft />
                     &nbsp; &nbsp; {value.name}
                   </div>
