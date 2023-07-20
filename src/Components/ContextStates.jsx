@@ -16,7 +16,7 @@ function AppStates({ children }) {
     const [prom3, setProm3 ] = useState(0);
     const [prom4, setProm4 ] = useState(0);
     const [prom5, setProm5 ] = useState(0);
-    const domain = "192.168.0.101:8000";
+    const domain = "127.0.0.1:8000";
 
     useEffect(() => {
         axios.get("http://"+ domain +"/api/collections/").then((response) => {
